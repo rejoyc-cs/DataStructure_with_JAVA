@@ -24,11 +24,12 @@ public class StackArray<E>
 		return (t==-1);
 	}
 	
-	public void push(E e) throws IllegalStateException
+	public void push(E e)
 	{
 		if (size() == data.length)
 		{
-			throw new IllegalStateException("Stack is Full");
+			System.out.println("Stack Full!");
+			return;
 		}
 		
 		data[++t] = e;
